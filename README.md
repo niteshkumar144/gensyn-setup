@@ -10,3 +10,4 @@ This repository provides a **one-liner automated script** to setup GENSYN AI RL-
 ```bash
 curl -s https://raw.githubusercontent.com/niteshkumar144/gensyn-setup/main/setup.sh | bash
 
+### 2️⃣ **Create a Screen Session**
