@@ -6,7 +6,7 @@ This guide helps you set up and run the **GENSYN AI RL-SWARM** node step-by-step
 
 ## ⚡ **Full Setup & Run Guide**
 
-### ✅ 1️⃣ **Run the Setup Script**
+### ✅ 1️⃣ **Create & Run the Setup Script**
 
 ```bash
 # Remove old script if exists
@@ -14,9 +14,72 @@ rm gensyn.sh
 
 # Create new script
 nano gensyn.sh
+```
 
-# (Paste your script inside nano, then save: CTRL+X → Y → Enter)
+➡️ **Now paste the below script inside nano:**
 
+```bash
+#!/bin/bash
+
+# Colors
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+echo -e "${GREEN}"
+echo " _   _ _ _ _______ _______ _____ _    _ "
+echo "| \ | | | |__   __|__   __|_   _| |  | |"
+echo "|  \| | | |  | |     | |    | | | |__| |"
+echo "| . ` | | |  | |     | |    | | |  __  |"
+echo "| |\  | | |  | |     | |   _| |_| |  | |"
+echo "|_| \_|_|_|  |_|     |_|  |_____|_|  |_|"
+echo "         By NITESH 🇮🇳"
+echo -e "${NC}"
+
+# Update & Install Dependencies
+sudo apt update && sudo apt install -y sudo
+sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl wget screen git lsof nano unzip iproute2 build-essential gcc g++
+
+# CUDA
+[ -f cuda.sh ] && rm cuda.sh
+curl -o cuda.sh https://raw.githubusercontent.com/zunxbt/gensyn-testnet/main/cuda.sh && chmod +x cuda.sh && . ./cuda.sh
+
+# NodeJS & Yarn
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt update && sudo apt install -y nodejs
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install -y yarn
+
+# Version Check
+node -v
+npm -v
+yarn -v
+python3 --version
+
+# Clone Repo
+git clone https://github.com/gensyn-ai/rl-swarm.git && cd rl-swarm
+
+# Python Venv
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Modal Login Setup
+cd modal-login
+yarn install
+yarn upgrade
+yarn add next@latest
+yarn add viem@latest
+cd ..
+
+# Update Repo
+git reset --hard
+git pull origin main
+git checkout tags/v0.4.3
+```
+
+➡️ **Save & Exit nano:** `CTRL + X` → `Y` → `ENTER`
+
+```bash
 # Make it executable
 chmod +x gensyn.sh
 
