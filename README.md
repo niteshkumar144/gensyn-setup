@@ -247,7 +247,7 @@ Would you like to push models you train in the RL swarm to the Hugging Face Hub?
 
 ### ✅ 8️⃣ **WandB Prompt**
 
-When you see after some models trained like this:
+When some models are trained it will look like this, then do this step:
 
 ![Screenshot 2025-06-14 233904](https://github.com/user-attachments/assets/b1ddbc18-3ea5-4ff7-8b60-c0e9f8239690)
 
