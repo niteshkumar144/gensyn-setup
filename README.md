@@ -179,6 +179,9 @@ cd rl-swarm
 
 ### ✅ 4️⃣ **Edit Config File**
 
+![Screenshot 2025-06-14 213042](https://github.com/user-attachments/assets/41cbd89b-430e-4fd1-b152-4d98176fa1b5)
+
+
 ```bash
 nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 ```
