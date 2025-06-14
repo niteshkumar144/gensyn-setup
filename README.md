@@ -188,9 +188,9 @@ nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 
 | Original | New |
 |----------|-----|
-| `float: 16` | `float: 32` |
-| `true` | `false` |
-| `batch size: 2` | `batch size: 1` |
+| `torch_dtype: float16` | `torch_dtype: float32` |
+| `gradient_checkpointing: true` | `gradient_checkpointing: false` |
+| `per_device_train_batch_size: 2` | `per_device_train_batch_size: 1` |
 
 ➡️ **Save & Exit:** `CTRL + X` → `Y` → `ENTER`
 
