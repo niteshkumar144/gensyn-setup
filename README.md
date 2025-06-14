@@ -237,9 +237,8 @@ After some time, you will be asked:
 
 ![Screenshot 2025-06-14 233825](https://github.com/user-attachments/assets/9fc7f899-b5ff-4570-bf76-9860e0d7c104)
 
-```
+
 Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N]
-```
 
 ➡️ **Select:** `N`
 
@@ -251,12 +250,12 @@ When some models are trained it will look like this, then do this step:
 
 ![Screenshot 2025-06-14 233904](https://github.com/user-attachments/assets/b1ddbc18-3ea5-4ff7-8b60-c0e9f8239690)
 
-```
+
 wandb: (1) Create a W&B account
 wandb: (2) Use an existing W&B account
 wandb: (3) Don't visualize my results
 wandb: Enter your choice:
-```
+
 
 ➡️ **Select:** `3`
 
