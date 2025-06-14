@@ -1,4 +1,4 @@
-# 🚀 GENSYN Automated Setup — By NITESH 🇮🇳
+# 🚀 GENSYN Setup — By NITESH KUMAWAT
 
 This guide helps you set up and run the **GENSYN AI RL-SWARM** node step by step on any VPS/server (Linux/Mac).
 
@@ -67,13 +67,14 @@ cloudflared tunnel --url http://localhost:3000
 
 ➡️ **Open the provided tunnel link in your browser, log in with Gmail & OTP, then return to the first tab to continue.**
 
-### 7️⃣ Next, you will be prompted:
+### 7️⃣ After some time, you will be asked:
 
 ```
 >> Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N] N
 ```
+✅ **Select option N**
 
-### 8️⃣ After a while, when training starts, you will see:
+### 8️⃣ After a while, when few training completed, you will see:
 
 ```
 wandb: (1) Create a W&B account
@@ -98,6 +99,12 @@ wandb: Enter your choice: 3
 ---
 
 ## 🎉 **You’re all set!**
+
+---
+
+**THANK YOU** ❤️
+
+---
 
 ✨ Made with ❤️ by **NITESH** — Star ⭐ this repo if it helped you!
 
