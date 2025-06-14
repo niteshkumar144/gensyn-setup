@@ -1,4 +1,4 @@
-# 🚀 GENSYN AI RL-SWARM Setup — By NITESH KUMAWAT 🇮🇳
+# 🚀 GENSYN AI RL-SWARM Setup — By NITESH KUMAWAT
 
 This guide helps you set up and run the **GENSYN AI RL-SWARM** node step-by-step on any VPS/server (Linux/Mac).
 
@@ -182,6 +182,7 @@ cd rl-swarm
 ```bash
 nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 ```
+![Screenshot 2025-06-14 213042](https://github.com/user-attachments/assets/9ea032d0-8aa0-41cf-a9ac-3cccc2d51110)
 
 **Changes to make:**
 
@@ -224,6 +225,7 @@ Don’t worry — proceed to the next step.
 ```bash
 cloudflared tunnel --url http://localhost:3000
 ```
+![Screenshot 2025-06-14 231532](https://github.com/user-attachments/assets/68749305-bfde-445f-a960-d3d2f0731fe0)
 
 ➡️ Open the generated tunnel link in your browser, log in with Gmail & OTP, then return to the RL swarm terminal.
 
@@ -232,6 +234,8 @@ cloudflared tunnel --url http://localhost:3000
 ### ✅ 7️⃣ **Push Models to Hugging Face?**
 
 After some time, you will be asked:
+
+![Screenshot 2025-06-14 233825](https://github.com/user-attachments/assets/9fc7f899-b5ff-4570-bf76-9860e0d7c104)
 
 ```
 Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N]
@@ -244,6 +248,8 @@ Would you like to push models you train in the RL swarm to the Hugging Face Hub?
 ### ✅ 8️⃣ **WandB Prompt**
 
 When you see:
+
+![Screenshot 2025-06-14 233904](https://github.com/user-attachments/assets/b1ddbc18-3ea5-4ff7-8b60-c0e9f8239690)
 
 ```
 wandb: (1) Create a W&B account
@@ -284,5 +290,5 @@ You’re now part of the **GENSYN AI RL-SWARM**. Enjoy mining & contributing �
 
 ---
 
-✨ **Made with ❤️ by [NITESH KUMAWAT 🇮🇳]**  
+✨ **THANK YOU❤️**  
 ⭐ **Star this repo if you found it helpful!**
