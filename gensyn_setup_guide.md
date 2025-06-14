@@ -38,7 +38,7 @@ nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 
 **Changes to make:**
 
-- `float: 32` → `16`
+- `float: 16` → `32`
 - `true` → `false`
 - `batch size: 2` → `1`
 
