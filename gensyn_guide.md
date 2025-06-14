@@ -1,6 +1,6 @@
-# 🚀 GENSYN Automated Setup — By NITESH 🇮🇳
+# 🚀 GENSYN Setup — By NITESH KUMAWAT
 
-This repository provides a **one-liner automated script** to set up a **GENSYN AI RL-SWARM** node on any VPS/server (Linux/Mac).
+This repository provides a **Easy Setup** to set up a **GENSYN AI RL-SWARM** node on any VPS/server (Linux/Mac).
 
 ---
 
