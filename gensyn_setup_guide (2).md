@@ -44,8 +44,7 @@ nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 RL_SWARM_UNSLOTH=False ./run_rl_swarm.sh
 ```
 
-➡️ **During this step, you will be asked:**
-
+👇**During this step, you will be asked:**
 
 ➡️ Would you like to connect to the Testnet? [Y/n] Y
 
@@ -55,6 +54,8 @@ RL_SWARM_UNSLOTH=False ./run_rl_swarm.sh
 
 ✅ **Select option Y, A and 7**
 
+---
+
 ➡️ **Note:** After running, you will see:
 
 ```
@@ -62,7 +63,7 @@ RL_SWARM_UNSLOTH=False ./run_rl_swarm.sh
 >> Waiting for modal userData.json to be created...
 ```
 
-### 6️⃣ Start Cloudflare Tunnel (in a NEW tab)
+### 6️⃣ Next Start Cloudflare Tunnel (in a NEW tab)
 
 ```bash
 cloudflared tunnel --url http://localhost:3000
@@ -94,7 +95,7 @@ wandb: Enter your choice: 3
 [ -f backup.sh ] && rm backup.sh; curl -sSL -O https://raw.githubusercontent.com/AbhiEBA/gensyn1/main/backup.sh && chmod +x backup.sh && ./backup.sh
 ```
 
-### 🔟 Important Commands
+### 👇 Important Commands
 
 - **Detach Screen:** `CTRL + A + D`
 - **Attach Screen:** `screen -r gensyn`
