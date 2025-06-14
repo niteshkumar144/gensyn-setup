@@ -252,8 +252,11 @@ When some models are trained it will look like this, then do this step:
 
 
 wandb: (1) Create a W&B account
+
 wandb: (2) Use an existing W&B account
+
 wandb: (3) Don't visualize my results
+
 wandb: Enter your choice:
 
 
