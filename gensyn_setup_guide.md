@@ -64,10 +64,8 @@ RL_SWARM_UNSLOTH=False ./run_rl_swarm.sh
 
 ➡️ **Note:** After running, you will see:
 
-```
->> Failed to open http://localhost:3000. Please open it manually.
->> Waiting for modal userData.json to be created...
-```
+➡️ Failed to open http://localhost:3000. Please open it manually.
+➡️ Waiting for modal userData.json to be created...
 
 ---
 
@@ -83,9 +81,8 @@ cloudflared tunnel --url http://localhost:3000
 
 ### 7️⃣ After some time, you will be asked:
 
-```
->> Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N] N
-```
+➡️ Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N] N
+
 ✅ **Select option N**
 
 ---
