@@ -179,9 +179,6 @@ cd rl-swarm
 
 ### ✅ 4️⃣ **Edit Config File**
 
-![Screenshot 2025-06-14 213042](https://github.com/user-attachments/assets/41cbd89b-430e-4fd1-b152-4d98176fa1b5)
-
-
 ```bash
 nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 ```
@@ -212,6 +209,9 @@ RL_SWARM_UNSLOTH=False ./run_rl_swarm.sh
 
 ➡️ **Note:**  
 After running, you may see:
+
+![Screenshot 2025-06-14 233952](https://github.com/user-attachments/assets/5bf6963f-93b1-41e0-9c8c-6c999560799b)
+
 - `Failed to open http://localhost:3000. Please open it manually.`
 - `Waiting for modal userData.json to be created...`
 
