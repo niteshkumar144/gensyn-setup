@@ -44,23 +44,6 @@ nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 RL_SWARM_UNSLOTH=False ./run_rl_swarm.sh
 ```
 
-➡️ **Note:** After running, you will see:
-
-```
->> Failed to open http://localhost:3000. Please open it manually.
->> Waiting for modal userData.json to be created...
-```
-
-Proceed to the next step after this.
-
-### 6️⃣ Start Cloudflare Tunnel (in a NEW tab)
-
-```bash
-cloudflared tunnel --url http://localhost:3000
-```
-
-### 7️⃣ Open the provided tunnel link in your browser, log in using Gmail & OTP, then return to the first tab to continue.
-
 ➡️ **During this step, you will be asked:**
 
 ```
@@ -68,6 +51,22 @@ cloudflared tunnel --url http://localhost:3000
 >> Which swarm would you like to join (Math (A) or Math Hard (B))? [A/b] A
 >> How many parameters (in billions)? [0.5, 1.5, 7, 32, 72] 7
 ```
+
+➡️ **Note:** After running, you will see:
+
+```
+>> Failed to open http://localhost:3000. Please open it manually.
+>> Waiting for modal userData.json to be created...
+```
+Process to the next step after this.
+
+### 6️⃣ Start Cloudflare Tunnel (in a NEW tab)
+
+```bash
+cloudflared tunnel --url http://localhost:3000
+```
+
+➡️ Open the provided tunnel link in your browser, log in using Gmail & OTP, then return to the first tab to continue
 
 ### 8️⃣ Next, you will be prompted:
 
