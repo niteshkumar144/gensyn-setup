@@ -1,101 +1,68 @@
-# 🚀 GENSYN Automated Setup — By NITESH 🇮🇳
+# 🇮🇳✨ GENSYN Setup Guide by NITESH ✨🇮🇳
 
-This repository contains a fully automated script to setup GENSYN AI RL-SWARM node on your VPS or server.  
-Follow these clear steps 👇
+## 📌 **Step-by-Step VPS Guide (Mac/Linux)**
 
 ---
 
-## ✅ **How to Use**
+## 🖥️ **Device/System Requirements**
 
-### 🔹 **Step 1 — Run Script**
+✅ Linux VPS or Mac Terminal  
+✅ Internet Connection  
+✅ GitHub account (for script)
+
+---
+
+## ⚡ **Commands to Setup**
+
+### 🚀 **1️⃣ Run the Setup Script**
 ```bash
 curl -s https://raw.githubusercontent.com/niteshkumar144/gensyn-setup/main/setup.sh | bash
-This will:
 
-Remove old rl-swarm repo (if any)
 
-Install Python, NodeJS, Yarn, Cloudflared, CUDA
-
-Clone GENSYN repo
-
-Install all dependencies
-
-🔹 Step 2 — Create Screen Session
-bash
-Copy
-Edit
+🖥️ 2️⃣ Create a Screen Session
 screen -S gensyn
-🔹 Step 3 — Enter Repo
-bash
-Copy
-Edit
+
+
+📂 3️⃣ Navigate to Project Folder
 cd rl-swarm
-🔹 Step 4 — Edit Config
-bash
-Copy
-Edit
+
+
+📝 4️⃣ Edit Config File
 nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
-Change:
+📌 In the config file, do this:
 
-float: 32 ⟶ 16
+float: 32 → change to 16
 
-true ⟶ false
+true → change to false
 
-batch size: 2 ⟶ 1
+batch size: 2 → change to 1
 
-🔹 Step 5 — Run RL Swarm
-bash
-Copy
-Edit
+Then save & exit:
+
+For nano: CTRL + O (save), ENTER (confirm), CTRL + X (exit)
+
+
+🔁 5️⃣ Run RL Swarm
 RL_SWARM_UNSLOTH=False ./run_rl_swarm.sh
-🔹 Step 6 — Start Cloudflared Tunnel
-Open new terminal tab and run:
 
-bash
-Copy
-Edit
+
+🌐 6️⃣ Create Tunnel in New Terminal
+In a new tab or window, run:
 cloudflared tunnel --url http://localhost:3000
-👉 Login as per prompt
+Login with your Cloudflare account when prompted.
 
-⚡ One-Liner Install
-bash
-Copy
-Edit
-curl -s https://raw.githubusercontent.com/niteshkumar144/gensyn-setup/main/setup.sh | bash
-🙌 Thank You!
-Created with ❤️ by NITESH
+✅ Everything is Done!
 
-yaml
-Copy
-Edit
+📌 Pro Tip:
 
----
+To exit screen safely: CTRL + A + D
 
-### 📌 **Step 4 — Commit**
+To reattach later:
 
-✅ **Commit message:**  
-Add professional README.md guide
-
-yaml
-Copy
-Edit
-
-✅ **Click:** `Commit new file`
-
----
-
-## 🎉 **Done!**
-
-Ab tera guide direct **repo pe live ho jayega!**  
-Jo bhi tera repo dekhega — woh **poora step-by-step guide** README mein milega.
-
----
-
-Agar chahe toh mujhe Collaborator bana de — toh main bhi kabhi future mein tera guide update kar dunga! 🔥✨
+screen -r gensyn
 
 
-
-
-
-
+🏆 Credits
+Script & Guide by: NITESH
+🇮🇳✨ Happy Building!
 
