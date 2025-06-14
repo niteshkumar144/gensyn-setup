@@ -47,9 +47,9 @@ RL_SWARM_UNSLOTH=False ./run_rl_swarm.sh
 ➡️ **During this step, you will be asked:**
 
 
->> Would you like to connect to the Testnet? [Y/n] Y
->> Which swarm would you like to join (Math (A) or Math Hard (B))? [A/b] A
->> How many parameters (in billions)? [0.5, 1.5, 7, 32, 72] 7
+➡️ Would you like to connect to the Testnet? [Y/n] Y
+➡️ Which swarm would you like to join (Math (A) or Math Hard (B))? [A/b] A
+➡️ How many parameters (in billions)? [0.5, 1.5, 7, 32, 72] 7
 
 ✅ **Select option Y, A and 7**
 
