@@ -158,26 +158,9 @@ chmod +x gensyn.sh
 # Run it
 ./gensyn.sh
 ```
-
 ---
 
-### ✅ 2️⃣ **Create a Screen Session**
-
-```bash
-screen -S gensyn
-```
-
----
-
-### ✅ 3️⃣ **Go to the Project Folder**
-
-```bash
-cd rl-swarm
-```
-
----
-
-### ✅ 4️⃣ **Edit Config File**
+### ✅ 2️⃣ **Edit Config File**
 
 ```bash
 nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
@@ -196,7 +179,7 @@ nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 
 ---
 
-### ✅ 5️⃣ **Run the RL Swarm**
+### ✅ 3️⃣ **Run the RL Swarm**
 
 ```bash
 RL_SWARM_UNSLOTH=False ./run_rl_swarm.sh
@@ -220,7 +203,7 @@ Don’t worry — proceed to the next step.
 
 ---
 
-### ✅ 6️⃣ **Start Cloudflare Tunnel (in a NEW tab)**
+### ✅ 4️⃣ **Start Cloudflare Tunnel (in a NEW tab)**
 
 ```bash
 cloudflared tunnel --url http://localhost:3000
@@ -231,7 +214,7 @@ cloudflared tunnel --url http://localhost:3000
 
 ---
 
-### ✅ 7️⃣ **Push Models to Hugging Face?**
+### ✅ 5️⃣ **Push Models to Hugging Face?**
 
 After some time, you will be asked:
 
@@ -244,7 +227,7 @@ Would you like to push models you train in the RL swarm to the Hugging Face Hub?
 
 ---
 
-### ✅ 8️⃣ **WandB Prompt**
+### ✅ 6️⃣ **WandB Prompt**
 
 When some models are trained it will look like this, then do this step:
 
@@ -264,7 +247,7 @@ wandb: Enter your choice:
 
 ---
 
-### ✅ 9️⃣ **Backup Important Files**
+### ✅ 7️⃣ **Backup Important Files**
 
 ```bash
 [ -f backup.sh ] && rm backup.sh
