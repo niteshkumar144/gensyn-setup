@@ -179,6 +179,8 @@ nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 
 ---
 
+⚠️ **NOTE: Before Run RL Swarm If You Have Old Swarm.pem File Then Import To rl-swarm Folder**
+
 ### ✅ 3️⃣ **Run the RL Swarm**
 
 ```bash
@@ -247,7 +249,7 @@ wandb: Enter your choice:
 
 ---
 
-### ✅ 7️⃣ **Backup Important Files**
+### ✅ 7️⃣ **Backup Important Files** 📜
 
 ```bash
 [ -f backup.sh ] && rm backup.sh
@@ -258,7 +260,7 @@ chmod +x backup.sh
 
 ---
 
-## ⚙️ **Important Commands**
+## ⚙️ **Important Commands** 👇
 
 | Action | Command |
 |--------|---------|
