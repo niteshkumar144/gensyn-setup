@@ -18,6 +18,12 @@ rm gensyn.sh
 
 # Create new script
 nano gensyn.sh
+
+# # Make it executable
+chmod +x gensyn.sh
+
+# Run it
+./gensyn.sh
 ```
 
 ➡️ **Now paste the below script inside nano:**
@@ -152,16 +158,10 @@ echo -e "${CYAN}====================================================="
 echo -e " 🎉 ALL DONE! ~ Script by NITESH"
 echo -e "=====================================================${NC}"
 ```
+---
 
-➡️ **Save & Exit nano:** `CTRL + X` → `Y` → `ENTER`
+### ➡️  **Save & Exit nano:** `CTRL + X` → `Y` → `ENTER`
 
-```bash
-# Make it executable
-chmod +x gensyn.sh
-
-# Run it
-./gensyn.sh
-```
 ---
 
 ### ✅ 2️⃣ **Edit Config File**
