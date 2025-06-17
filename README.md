@@ -252,10 +252,7 @@ wandb: Enter your choice:
 ### ✅ 7️⃣ **Backup Important Files** 📜
 
 ```bash
-[ -f backup.sh ] && rm backup.sh
-curl -sSL -O https://raw.githubusercontent.com/AbhiEBA/gensyn1/main/backup.sh
-chmod +x backup.sh
-./backup.sh
+curl -s https://raw.githubusercontent.com/niteshkumar144/gensyn-setup/main/backup.sh | bash
 ```
 
 ---
