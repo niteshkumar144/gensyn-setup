@@ -9,6 +9,10 @@ This guide helps you set up and run the **GENSYN AI RL-SWARM** node step-by-step
 ### ✅ 1️⃣ **Create & Run the Setup Script**
 
 ```bash
+# Install Basic tools 
+sudo apt update
+sudo apt install nano -y
+
 # Remove old script if exists
 rm gensyn.sh
 
