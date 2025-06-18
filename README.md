@@ -6,7 +6,19 @@ This guide helps you set up and run the **GENSYN AI RL-SWARM** node step-by-step
 
 ## ⚡ **Full Setup & Run Guide**
 
-### ✅ 1️⃣ **Create & Run the Setup Script**
+---
+
+## 🖥️ **System Requirements** ⚙️
+
+- OS: Ubuntu 20.04 or newer (VPS recommended)
+- CPU: 4 cores minimum
+- RAM: 16 GB minimum
+- Disk: 100GB SSD recommended
+- Network: Stable internet connection
+
+---
+
+## ✅ 1️⃣ **Create & Run the Setup Script**
 
 ```bash
 # Install Basic tools 
@@ -26,7 +38,7 @@ chmod +x gensyn.sh
 ./gensyn.sh
 ```
 
-➡️ **Now paste the below script inside nano:**
+## ➡️ **Now paste the below script inside nano:**
 
 ```bash
 #!/bin/bash
@@ -144,13 +156,6 @@ screen -S gensyn
 # 📂 Change to rl-swarm Directory
 # ---------------------------
 cd rl-swarm
-
-# ---------------------------
-# ✏️  Open Config File in Nano
-# ---------------------------
-echo -e "${BLUE}>> Opening your config file with nano...${NC}"
-nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
-
 # ---------------------------
 # ✅ Done!
 # ---------------------------
@@ -164,7 +169,7 @@ echo -e "=====================================================${NC}"
 
 ---
 
-### ✅ 2️⃣ **Edit Config File**
+## ✅ 2️⃣ **Edit Config File**
 
 ```bash
 nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
@@ -179,13 +184,13 @@ nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 | `gradient_checkpointing: true` | `gradient_checkpointing: false` |
 | `per_device_train_batch_size: 2` | `per_device_train_batch_size: 1` |
 
-➡️ **Save & Exit:** `CTRL + X` → `Y` → `ENTER`
+### ➡️ **Save & Exit:** `CTRL + X` → `Y` → `ENTER`
 
 ---
 
 ⚠️ **NOTE: Before Run RL Swarm If You Have Old Swarm.pem File Then Import To rl-swarm Folder**
 
-### ✅ 3️⃣ **Run the RL Swarm**
+## ✅ 3️⃣ **Run the RL Swarm**
 
 ```bash
 RL_SWARM_UNSLOTH=False ./run_rl_swarm.sh
@@ -197,7 +202,7 @@ RL_SWARM_UNSLOTH=False ./run_rl_swarm.sh
 - `Which swarm would you like to join (Math (A) or Math Hard (B))? [A/b]` → **A**
 - `How many parameters (in billions)? [0.5, 1.5, 7, 32, 72]` → **7**
 
-➡️ **Note:**  
+#### ➡️ **Note:**  
 After running, you may see:
 
 ![Screenshot 2025-06-14 233952](https://github.com/user-attachments/assets/5bf6963f-93b1-41e0-9c8c-6c999560799b)
@@ -209,18 +214,18 @@ Don’t worry — proceed to the next step.
 
 ---
 
-### ✅ 4️⃣ **Start Cloudflare Tunnel (in a NEW tab)**
+## ✅ 4️⃣ **Start Cloudflare Tunnel (in a NEW tab)**
 
 ```bash
 cloudflared tunnel --url http://localhost:3000
 ```
 ![Screenshot 2025-06-14 231532](https://github.com/user-attachments/assets/68749305-bfde-445f-a960-d3d2f0731fe0)
 
-➡️ Open the generated tunnel link in your browser, log in with Gmail & OTP, then return to the RL swarm terminal.
+#### ➡️ Open the generated tunnel link in your browser, log in with Gmail & OTP, then return to the RL swarm terminal.
 
 ---
 
-### ✅ 5️⃣ **Push Models to Hugging Face?**
+## ✅ 5️⃣ **Push Models to Hugging Face?**
 
 After some time, you will be asked:
 
@@ -229,11 +234,11 @@ After some time, you will be asked:
 
 Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N]
 
-➡️ **Select:** `N`
+#### ➡️ **Select:** `N`
 
 ---
 
-### ✅ 6️⃣ **WandB Prompt**
+## ✅ 6️⃣ **WandB Prompt**
 
 When some models are trained it will look like this, then do this step:
 
@@ -249,11 +254,11 @@ wandb: (3) Don't visualize my results
 wandb: Enter your choice:
 
 
-➡️ **Select:** `3`
+#### ➡️ **Select:** `3`
 
 ---
 
-### ✅ 7️⃣ **Backup Important Files** 📜
+## ✅ 7️⃣ **Backup Important Files** 📜
 
 ```bash
 curl -s https://raw.githubusercontent.com/niteshkumar144/gensyn-setup/main/backup.sh | bash
@@ -279,4 +284,9 @@ You’re now part of the **GENSYN AI RL-SWARM**. Enjoy mining & contributing �
 ---
 
 ✨ **THANK YOU❤️**  
+
 ⭐ **Star this repo if you found it helpful!**
+
+𝕏 𝗙𝗼𝗹𝗹𝗼𝘄 𝗺𝗲╰┈➤ https://x.com/Nitesh_Kumar177
+
+---
