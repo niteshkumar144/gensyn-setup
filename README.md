@@ -156,6 +156,8 @@ screen -S gensyn
 # 📂 Change to rl-swarm Directory
 # ---------------------------
 cd rl-swarm
+python3 -m venv .venv
+source .venv/bin/activate
 # ---------------------------
 # ✅ Done!
 # ---------------------------
