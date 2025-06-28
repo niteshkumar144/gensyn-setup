@@ -144,9 +144,7 @@ fi
 # 🖥️ Install Tmux
 # ---------------------------
 echo -e "${BLUE}>> Installing tmux...${NC}"
-sudo apt update
-sudo apt install tmux
-
+sudo apt install -y tmux
 # ---------------------------
 
 echo -e "${CYAN}>> Thank you!❤️  Proceed to the next steps by following the guide.${NC}"
