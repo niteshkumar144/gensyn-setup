@@ -135,56 +135,21 @@ yarn add viem@latest
 cd ..
 
 echo -e "${BLUE}>> Resetting Git repo and pulling latest changes...${NC}"
+git switch main
 git reset --hard
+git clean -fd
 git pull origin main
-git checkout tags/v0.4.3
-
-
-# ---------------------------
-# 🗂️  Manage Screen Session
-# ---------------------------
-echo -e "${YELLOW}>> Checking for existing 'gensyn' screen session...${NC}"
-if screen -list | grep -q "gensyn"; then
-  screen -S gensyn -X quit
-  echo -e "${GREEN}>> Old 'gensyn' screen terminated.${NC}"
-fi
-
-echo -e "${GREEN}>> Starting new 'gensyn' screen session...${NC}"
-screen -S gensyn
-
-# ---------------------------
-# 📂 Change to rl-swarm Directory
-# ---------------------------
-cd rl-swarm
-python3 -m venv .venv
-source .venv/bin/activate
-# ---------------------------
-# ✅ Done!
-# ---------------------------
-echo -e "${CYAN}====================================================="
-echo -e " 🎉 ALL DONE! ~ Script by NITESH"
-echo -e "=====================================================${NC}"
-```
 ---
 
+```
 ### ➡️  **Save & Exit nano:** `CTRL + X` → `Y` → `ENTER`
 
 ---
 
-## ✅ 2️⃣ **Edit Config File**
-
+## 2️⃣ Create Tmux Session 
 ```bash
-nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
+tmux new -s gensyn
 ```
-![Screenshot 2025-06-14 213042](https://github.com/user-attachments/assets/9ea032d0-8aa0-41cf-a9ac-3cccc2d51110)
-
-**Changes to make:**
-
-| Original | New |
-|----------|-----|
-| `torch_dtype: float16` | `torch_dtype: float32` |
-| `gradient_checkpointing: true` | `gradient_checkpointing: false` |
-| `per_device_train_batch_size: 2` | `per_device_train_batch_size: 1` |
 
 ### ➡️ **Save & Exit:** `CTRL + X` → `Y` → `ENTER`
 
@@ -195,14 +160,8 @@ nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
 ## ✅ 3️⃣ **Run the RL Swarm**
 
 ```bash
-RL_SWARM_UNSLOTH=False ./run_rl_swarm.sh
+./run_rl_swarm.sh
 ```
-
-**You will be asked:**
-
-- `Would you like to connect to the Testnet? [Y/n]` → **Y**
-- `Which swarm would you like to join (Math (A) or Math Hard (B))? [A/b]` → **A**
-- `How many parameters (in billions)? [0.5, 1.5, 7, 32, 72]` → **7**
 
 #### ➡️ **Note:**  
 After running, you may see:
@@ -240,26 +199,6 @@ Would you like to push models you train in the RL swarm to the Hugging Face Hub?
 
 ---
 
-## ✅ 6️⃣ **WandB Prompt**
-
-When some models are trained it will look like this, then do this step:
-
-![Screenshot 2025-06-14 233904](https://github.com/user-attachments/assets/b1ddbc18-3ea5-4ff7-8b60-c0e9f8239690)
-
-
-wandb: (1) Create a W&B account
-
-wandb: (2) Use an existing W&B account
-
-wandb: (3) Don't visualize my results
-
-wandb: Enter your choice:
-
-
-#### ➡️ **Select:** `3`
-
----
-
 ## ✅ 7️⃣ **Backup Important Files** 📜
 
 ```bash
@@ -272,10 +211,9 @@ curl -s https://raw.githubusercontent.com/niteshkumar144/gensyn-setup/main/backu
 
 | Action | Command |
 |--------|---------|
-| Detach screen | `CTRL + A + D` |
-| Re-attach screen | `screen -r gensyn` |
+| Detach screen | `CTRL + B + D` |
+| Re-attach screen | `tmux a -t gensyn` |
 | Stop node | `CTRL + C` inside screen |
-| Quit screen | `screen -S gensyn -X quit` |
 
 ---
 
