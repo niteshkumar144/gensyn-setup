@@ -145,7 +145,7 @@ git pull origin main
 
 ---
 
-## 2️⃣ Create Tmux Session 
+## ✅ 2️⃣ Create Tmux Session 
 #### **Why Tmux?**
 We use `tmux` to create a session because unlike `screen -S`, which can terminate unexpectedly, `tmux` provides better stability and flexibility. It ensures your processes keep running even if the connection to the terminal is lost.
 ```bash
