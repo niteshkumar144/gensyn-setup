@@ -150,7 +150,8 @@ sudo apt install -y tmux
 echo -e "${CYAN}>> Thank you!❤️  Proceed to the next steps by following the guide.${NC}"
 
 ```
-### ➡️  **Save & Exit nano:** `CTRL + X` → `Y` → `ENTER`
+
+### ➡️ **Save & Exit:** `CTRL + X` → `Y` → `ENTER`
 
 ---
 
@@ -160,8 +161,6 @@ We use `tmux` to create a session because unlike `screen -S`, which can terminat
 ```bash
 tmux new -s gensyn
 ```
-
-### ➡️ **Save & Exit:** `CTRL + X` → `Y` → `ENTER`
 
 ---
 ## ✅ 3️⃣ **Navigate to RL Swarm Folder and Set Up Virtual Environment**
