@@ -146,6 +146,8 @@ git pull origin main
 ---
 
 ## 2️⃣ Create Tmux Session 
+#### **Why Tmux?**
+We use `tmux` to create a session because unlike `screen -S`, which can terminate unexpectedly, `tmux` provides better stability and flexibility. It ensures your processes keep running even if the connection to the terminal is lost.
 ```bash
 tmux new -s gensyn
 ```
@@ -153,10 +155,22 @@ tmux new -s gensyn
 ### ➡️ **Save & Exit:** `CTRL + X` → `Y` → `ENTER`
 
 ---
+## ✅ 3️⃣ **Navigate to RL Swarm Folder and Set Up Virtual Environment**
+
+After creating the Tmux session, navigate to the RL Swarm directory and set up the Python virtual environment:
+
+```bash
+# Change directory to the RL Swarm folder
+cd rl-swarm
+
+# Set up the Python virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
 ⚠️ **NOTE: Before Run RL Swarm If You Have Old Swarm.pem File Then Import To rl-swarm Folder**
 
-## ✅ 3️⃣ **Run the RL Swarm**
+## ✅ 4️⃣  **Run the RL Swarm**
 
 ```bash
 ./run_rl_swarm.sh
@@ -174,7 +188,7 @@ Don’t worry — proceed to the next step.
 
 ---
 
-## ✅ 4️⃣ **Start Cloudflare Tunnel (in a NEW tab)**
+## ✅ 5️⃣ **Start Cloudflare Tunnel (in a NEW tab)**
 
 ```bash
 cloudflared tunnel --url http://localhost:3000
@@ -185,18 +199,19 @@ cloudflared tunnel --url http://localhost:3000
 
 ---
 
-## ✅ 5️⃣ **Push Models to Hugging Face?**
+## ✅ 6️⃣ **Push Models to Hugging Face?**
 
 After some time, you will be asked:
 
 ![Screenshot 2025-06-14 233825](https://github.com/user-attachments/assets/9fc7f899-b5ff-4570-bf76-9860e0d7c104)
 
-
 Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N]
 
-#### ➡️ **Select:** `N`
+#### ➡️ Press `N` and Press Enter
 
 ---
+## ✅ After successfully run it's look like this 👇
+![Screenshot 2025-06-28 122541](https://github.com/user-attachments/assets/a8c2b9c8-b6ff-4941-ab05-ddcc4f0b1658)
 
 ## ✅ 7️⃣ **Backup Important Files** 📜
 
