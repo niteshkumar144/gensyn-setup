@@ -71,20 +71,6 @@ echo -e "${YELLOW}>> Removing any existing 'rl-swarm' directory...${NC}"
 rm -rf rl-swarm
 
 # ---------------------------
-# ☁️  Install Cloudflared (DEB method)
-# ---------------------------
-echo -e "${YELLOW}>> Installing Cloudflared (.deb)...${NC}"
-wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
-
-if [ -f cloudflared-linux-amd64.deb ]; then
-  sudo dpkg -i cloudflared-linux-amd64.deb || sudo apt-get install -f -y
-  cloudflared --version
-  echo -e "${GREEN}>> Cloudflared installed successfully.${NC}"
-else
-  echo -e "${RED}>> Failed to download Cloudflared .deb!${NC}"
-fi
-
-# ---------------------------
 # ⚙️  Install Required Packages
 # ---------------------------
 echo -e "${BLUE}>> Updating & Installing core packages...${NC}"
@@ -139,6 +125,31 @@ git switch main
 git reset --hard
 git clean -fd
 git pull origin main
+
+# ---------------------------
+# ☁️  Install Cloudflared (DEB method)
+# ---------------------------
+echo -e "${YELLOW}>> Installing Cloudflared (.deb)...${NC}"
+wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+
+if [ -f cloudflared-linux-amd64.deb ]; then
+  sudo dpkg -i cloudflared-linux-amd64.deb || sudo apt-get install -f -y
+  cloudflared --version
+  echo -e "${GREEN}>> Cloudflared installed successfully.${NC}"
+else
+  echo -e "${RED}>> Failed to download Cloudflared .deb!${NC}"
+fi
+
+# ---------------------------
+# 🖥️ Install Tmux
+# ---------------------------
+echo -e "${BLUE}>> Installing tmux...${NC}"
+sudo apt update
+sudo apt install tmux
+
+# ---------------------------
+
+echo -e "${CYAN}>> Thank you!❤️  Proceed to the next steps by following the guide.${NC}"
 
 ```
 ### ➡️  **Save & Exit nano:** `CTRL + X` → `Y` → `ENTER`
