@@ -11,8 +11,8 @@ This guide helps you set up and run the **GENSYN AI RL-SWARM** node step-by-step
 ## 🖥️ **System Requirements** ⚙️
 
 - OS: Ubuntu 20.04 or newer (VPS recommended)
-- CPU: 4 cores minimum
-- RAM: 16 GB minimum
+- CPU: 8 cores minimum
+- RAM: 32 GB minimum
 - Disk: 100GB SSD recommended
 - Network: Stable internet connection
 
@@ -139,7 +139,6 @@ git switch main
 git reset --hard
 git clean -fd
 git pull origin main
----
 
 ```
 ### ➡️  **Save & Exit nano:** `CTRL + X` → `Y` → `ENTER`
