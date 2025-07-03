@@ -141,11 +141,6 @@ else
 fi
 
 # ---------------------------
-# 🖥️ Install Tmux
-# ---------------------------
-echo -e "${BLUE}>> Installing tmux...${NC}"
-sudo apt install -y tmux
-# ---------------------------
 
 echo -e "${CYAN}>> Thank you!❤️  Proceed to the next steps by following the guide.${NC}"
 
@@ -155,17 +150,15 @@ echo -e "${CYAN}>> Thank you!❤️  Proceed to the next steps by following the 
 
 ---
 
-## ✅ 2️⃣ Create Tmux Session 
-#### **Why Tmux?**
-We use `tmux` to create a session because unlike `screen -S`, which can terminate unexpectedly, `tmux` provides better stability and flexibility. It ensures your processes keep running even if the connection to the terminal is lost.
+## ✅ 2️⃣ Create Screen Session 
 ```bash
-tmux new -s gensyn
+screen -S gensyn
 ```
 
 ---
 ## ✅ 3️⃣ **Navigate to RL Swarm Folder and Set Up Virtual Environment**
 
-After creating the Tmux session, navigate to the RL Swarm directory and set up the Python virtual environment:
+After creating the screen session, navigate to the RL Swarm directory and set up the Python virtual environment:
 
 ```bash
 # Change directory to the RL Swarm folder
@@ -233,8 +226,8 @@ curl -s https://raw.githubusercontent.com/niteshkumar144/gensyn-setup/main/backu
 
 | Action | Command |
 |--------|---------|
-| Detach screen | `CTRL + B + D` |
-| Re-attach screen | `tmux a -t gensyn` |
+| Detach screen | `CTRL + A + D` |
+| Re-attach screen | `screen -r gensyn` |
 | Stop node | `CTRL + C` inside screen |
 
 ---
